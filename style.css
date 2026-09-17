@@ -1,0 +1,501 @@
+/* ===== GOOGLE FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #eef1f7;
+    display: flex;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+.sidebar {
+    width: 240px;
+    background: linear-gradient(175deg, #1a2f5e, #2a5298);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 14px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.25);
+    z-index: 100;
+}
+
+.sidebar-logo {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 28px;
+    padding: 12px;
+    background: rgba(255,255,255,0.13);
+    border-radius: 12px;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-label {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    color: rgba(255,255,255,0.4);
+    margin: 18px 0 7px 6px;
+    text-transform: uppercase;
+}
+
+.sidebar button {
+    width: 100%;
+    background: transparent;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    padding: 10px 13px;
+    text-align: left;
+    font-size: 13.5px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    margin-bottom: 3px;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar button:hover {
+    background: rgba(255,255,255,0.16);
+}
+
+.ex-toggle {
+    font-weight: 600 !important;
+}
+
+.ex-submenu button {
+    font-size: 12.5px !important;
+    padding: 8px 10px 8px 26px !important;
+    color: rgba(255,255,255,0.78) !important;
+    margin-bottom: 2px !important;
+    border-left: 2px solid rgba(255,255,255,0.2) !important;
+    border-radius: 0 8px 8px 0 !important;
+}
+
+.ex-submenu button:hover {
+    color: white !important;
+    border-left-color: white !important;
+    background: rgba(255,255,255,0.13) !important;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    padding-top: 18px;
+}
+
+.logout-btn {
+    background: rgba(231, 76, 60, 0.22) !important;
+    border: 1px solid rgba(231,76,60,0.4) !important;
+    justify-content: center !important;
+}
+
+.logout-btn:hover {
+    background: rgba(231, 76, 60, 0.5) !important;
+}
+
+/* ===========================
+   HIDDEN
+=========================== */
+.hidden {
+    display: none !important;
+}
+
+/* ===========================
+   MAIN AREA
+=========================== */
+.main {
+    margin-left: 240px;
+    flex: 1;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;   /* centers content horizontally */
+    align-items: flex-start;
+    padding: 50px 40px;
+}
+
+/* Every section fills the centered column */
+.section {
+    width: 100%;
+    max-width: 780px;          /* max readable width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* center children */
+}
+
+/* ===========================
+   PAGE HEADER
+=========================== */
+.page-header {
+    width: 100%;
+    margin-bottom: 36px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #1a2f5e;
+    margin-top: 10px;
+    line-height: 1.2;
+}
+
+.page-header p {
+    font-size: 15px;
+    color: #888;
+    margin-top: 8px;
+}
+
+/* ===========================
+   BADGE
+=========================== */
+.badge {
+    display: inline-block;
+    padding: 5px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.badge.blue   { background: #dbeafe; color: #1e40af; }
+.badge.green  { background: #d1fae5; color: #065f46; }
+.badge.orange { background: #fef3c7; color: #92400e; }
+
+/* ===========================
+   HOME CARDS
+=========================== */
+.card-grid {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.card {
+    background: white;
+    border-radius: 18px;
+    padding: 36px 28px;
+    width: 210px;
+    text-align: center;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+    transition: transform 0.22s, box-shadow 0.22s;
+    cursor: default;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.13);
+}
+
+.card-icon {
+    font-size: 44px;
+    margin-bottom: 14px;
+}
+
+.card h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1a2f5e;
+    margin-bottom: 6px;
+}
+
+.card p {
+    font-size: 13px;
+    color: #aaa;
+}
+
+/* ===========================
+   ABOUT
+=========================== */
+.about-box {
+    background: white;
+    border-radius: 18px;
+    padding: 44px 40px;
+    width: 100%;
+    max-width: 560px;
+    text-align: center;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+}
+
+.about-avatar {
+    font-size: 68px;
+    margin-bottom: 12px;
+}
+
+.about-box h2 {
+    font-size: 26px;
+    color: #1a2f5e;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.about-box p {
+    font-size: 14px;
+    color: #777;
+    margin: 5px 0;
+    line-height: 1.7;
+}
+
+.about-box hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 18px 0;
+}
+
+.about-tags {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.about-tags span {
+    background: #1a2f5e;
+    color: white;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* ===========================
+   ACTIVITY BOX
+=========================== */
+.activity-box {
+    background: white;
+    border-radius: 18px;
+    padding: 36px 40px;
+    width: 100%;
+    max-width: 660px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.activity-box label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+}
+
+.activity-box input[type="text"],
+.activity-box input[type="number"] {
+    padding: 12px 15px;
+    border: 1.5px solid #ddd;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+    transition: border 0.2s;
+    background: #fafafa;
+}
+
+.activity-box input:focus {
+    border-color: #2a5298;
+    background: white;
+}
+
+/* ===========================
+   RUN BUTTON
+=========================== */
+.run-btn {
+    background: linear-gradient(135deg, #1a2f5e, #2a5298);
+    color: white;
+    border: none;
+    padding: 13px 32px;
+    border-radius: 11px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.15s;
+    align-self: flex-start;
+    letter-spacing: 0.3px;
+}
+
+.run-btn:hover  { opacity: 0.87; }
+.run-btn:active { transform: scale(0.96); }
+
+/* ===========================
+   OUTPUT BOX
+=========================== */
+.output-box {
+    background: #f4f6fb;
+    border: 1.5px solid #e0e6f0;
+    border-radius: 11px;
+    padding: 18px 20px;
+    font-size: 14.5px;
+    color: #3a3a3a;
+    white-space: pre-wrap;
+    line-height: 2;
+    min-height: 58px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===========================
+   LIST OUTPUT
+=========================== */
+.output-list {
+    padding-left: 22px;
+    font-size: 14px;
+    color: #444;
+    line-height: 2.2;
+    width: 100%;
+}
+
+/* ===========================
+   REMOVE TEXT
+=========================== */
+.remove-text {
+    color: #c0392b;
+    font-size: 14px;
+    font-weight: 500;
+    background: #fef2f2;
+    border-radius: 10px;
+    padding: 12px 16px;
+    border: 1px solid #fecaca;
+}
+
+/* ===========================
+   IMAGE SWAP
+=========================== */
+.swap-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    border: 2px solid #e2e8f0;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ===========================
+   TO-DO ROW
+=========================== */
+.todo-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.todo-row input {
+    flex: 1;
+}
+
+/* ===========================
+   DARK MODE
+=========================== */
+.dom-dark {
+    background: #1a1a2e !important;
+}
+
+.dom-dark .output-box {
+    background: #16213e !important;
+    border-color: #0f3460 !important;
+    color: #e0e0e0 !important;
+}
+
+.dom-dark label,
+.dom-dark p,
+.dom-dark strong {
+    color: #e0e0e0 !important;
+}
+
+/* ===========================
+   GRADE CALCULATOR
+=========================== */
+.grade-card {
+    background: white;
+    border-radius: 18px;
+    padding: 42px 44px;
+    width: 100%;
+    max-width: 560px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.grade-card label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+}
+
+.grade-card input {
+    padding: 12px 15px;
+    border: 1.5px solid #ddd;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    outline: none;
+    background: #fafafa;
+    transition: border 0.2s;
+}
+
+.grade-card input:focus {
+    border-color: #2a5298;
+    background: white;
+}
+
+.grade-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.grade-buttons button {
+    flex: 1;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn-reset {
+    background: #ececec !important;
+    color: #555 !important;
+}
+
+.btn-reset:hover { opacity: 0.8; }
+
+.grade-result {
+    background: #eef2ff;
+    border-radius: 12px;
+    padding: 22px;
+    text-align: center;
+    min-height: 72px;
+    border: 1.5px solid #c7d2fe;
+}
+
+.grade-result p {
+    font-size: 19px;
+    font-weight: 700;
+    color: #1a2f5e;
+    margin: 4px 0;
+}

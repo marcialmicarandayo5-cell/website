@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>My JavaScript Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===== SIDEBAR ===== -->
+<div class="sidebar">
+    <div class="sidebar-logo">⚡ JS Portfolio</div>
+
+    <p class="sidebar-label">MENU</p>
+    <button onclick="showSection('homeSection')">🏠 Home</button>
+    <button onclick="showSection('aboutSection')">👤 About</button>
+
+    <p class="sidebar-label">EXERCISES</p>
+
+    <!-- Exercise 2 -->
+    <button class="ex-toggle" onclick="toggleEx('ex2Menu', 'ex2Arrow')">
+        📘 Exercise 2 <span id="ex2Arrow">▸</span>
+    </button>
+    <div class="ex-submenu hidden" id="ex2Menu">
+        <button onclick="showSection('e2a1')">Activity 1 — Hello JS</button>
+        <button onclick="showSection('e2a2')">Activity 2 — Variables</button>
+        <button onclick="showSection('e2a3')">Activity 3 — Calculator</button>
+        <button onclick="showSection('e2a4')">Activity 4 — Prompt</button>
+        <button onclick="showSection('e2a5')">Activity 5 — If-Else</button>
+        <button onclick="showSection('e2a6')">Activity 6 — Loops</button>
+        <button onclick="showSection('e2a7')">Activity 7 — Click Event</button>
+    </div>
+
+    <!-- Exercise 3 -->
+    <button class="ex-toggle" onclick="toggleEx('ex3Menu', 'ex3Arrow')">
+        📗 Exercise 3 <span id="ex3Arrow">▸</span>
+    </button>
+    <div class="ex-submenu hidden" id="ex3Menu">
+        <button onclick="showSection('e3a1')">Activity 1 — Change BG</button>
+        <button onclick="showSection('e3a2')">Activity 2 — Dark Mode</button>
+        <button onclick="showSection('e3a3')">Activity 3 — Add List</button>
+        <button onclick="showSection('e3a4')">Activity 4 — Remove Text</button>
+        <button onclick="showSection('e3a5')">Activity 5 — Char Counter</button>
+        <button onclick="showSection('e3a6')">Activity 6 — Mini Calc</button>
+        <button onclick="showSection('e3a7')">Activity 7 — Image Swap</button>
+        <button onclick="showSection('e3a8')">Activity 8 — To-Do List</button>
+    </div>
+
+    <!-- Exercise 4 -->
+    <button class="ex-toggle" onclick="toggleEx('ex4Menu', 'ex4Arrow')">
+        📙 Exercise 4 <span id="ex4Arrow">▸</span>
+    </button>
+    <div class="ex-submenu hidden" id="ex4Menu">
+        <button onclick="showSection('e4a1')">Activity 1 — Grade Calc</button>
+    </div>
+
+    <div class="sidebar-bottom">
+        <button class="logout-btn" onclick="alert('Logged out successfully.')">🚪 Logout</button>
+    </div>
+</div>
+
+<!-- ===== MAIN CONTENT ===== -->
+<div class="main">
+
+    <!-- HOME -->
+    <div id="homeSection" class="section">
+        <div class="page-header">
+            <h1>👋 Welcome!</h1>
+            <p>This is my JavaScript exercises portfolio. Open an exercise in the sidebar and click an activity to begin!</p>
+        </div>
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-icon">📘</div>
+                <h3>Exercise 2</h3>
+                <p>JavaScript Basics — 7 Activities</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📗</div>
+                <h3>Exercise 3</h3>
+                <p>DOM Manipulation — 8 Activities</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📙</div>
+                <h3>Exercise 4</h3>
+                <p>Grade Calculator — 1 Activity</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div id="aboutSection" class="section hidden">
+        <div class="page-header">
+            <h1>👤 About</h1>
+            <p>A little info about this project and the developer.</p>
+        </div>
+        <div class="about-box">
+            <div class="about-avatar">🧑‍💻</div>
+            <h2>Marcial MIcarandayo</h2>
+            <p>Age: 20 &nbsp;|&nbsp; Student </p>
+            <hr/>
+            <p>This portfolio contains JavaScript exercises covering basics like variables, loops, and DOM manipulation. Built using plain HTML, CSS, and JavaScript — no frameworks!</p>
+            <div class="about-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>DOM</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="e2a1" class="section hidden">
+        <div class="page-header">
+            <span class="badge blue">Exercise 2 › Activity 1</span>
+            <h1>Hello JavaScript</h1>
+            <p>Prints a welcome message to the output box below.</p>
+        </div>
+        <div class="activity-box">
+            <button class="run-btn" onclick="runE2A1()">▶ Run Activity 1</button>
+            <div class="output-box" id="out_e2a1"></div>
+        </div>
+    </div>
+
+    <div id="e2a2" class="section hidden">
+        <div class="page-header">
+            <span class="badge blue">Exercise 2 › Activity 2</span>
+            <h1>Variables</h1>
+            <p>Declares name, age, and isStudent variables and prints them.</p>
+        </div>
+        <div class="activity-box">
+            <button class="run-btn" onclick="runE2A2()">▶ Run Activity 2</button>
+            <div class="output-box" id="out_e2a2"></div>
+        </div>
+    </div>
+
+    <div id="e2a3" class="section hidden">
+        <div class="page-header">
+            <span class="badge blue">Exercise 2 › Activity 3</span>
+            <h1>Basic Calculator</h1>
+            <p>Performs +, -, *, / on two numbers and shows all results.</p>
+        </div>
+        <div class="activity-box">
+            <button class="run-btn" onclick="runE2A3()">▶ Run Activity 3</button>
+            <div class="output-box" id="out_e2a3"></div>
+        </div>
+    </div>
+
+    <div id="e2a4" class="section hidden">
+        <div class="page-header">
+            <span class="badge blue">Exercise 2 › Activity 4</span>
+            <h1>Prompt Input</h1>
+            <p>Enter your name and favorite number to get a personalized greeting.</p>
+        </div>
+        <div class="activity-box">
+            <label>Your Name:</label>
+            <input type="text" id="nameInput" placeholder="e.g. Ayan" />
+            <label>Favorite Number:</label>
+            <input type="number" id="favNumInput" placeholder="e.g. 7" />
+            <button class="run-btn" onclick="runE2A4()">▶ Get Greeting</button>
+            <div class="output-box" id="out_e2a4"></div>
+        </div>
+    </div>
+
+    <div id="e2a5" class="section hidden">
+        <div class="page-header">
+            <span class="badge blue">Exercise 2 › Activity 5</span>
+            <h1>If-Else — Eligibility Check</h1>
+            <p>Enter your age to check if you are eligible (18+).</p>
+        </div>
+        <div class="activity-box">
+            <label>Your Age:</label>
+            <input type="number" id="ageInput" placeholder="e.g. 20" />
+            <button class="run-btn" onclick="runE2A5()">▶ Check Eligibility</button>
+            <div class="output-box" id="out_e2a5"></div>
+        </div>
+    </div>
+
+    <div id="e2a6" class="section hidden">
+        <div class="page-header">
+            <span class="badge blue">Exercise 2 › Activity 6</span>
+            <h1>Loops</h1>
+            <p>Runs a for loop (1 to 10) and a while loop (10 to 1) — output shown below.</p>
+        </div>
+        <div class="activity-box">
+            <button class="run-btn" onclick="runE2A6()">▶ Run Loops</button>
+            <div class="output-box" id="out_e2a6"></div>
+        </div>
+    </div>
+
+    <div id="e2a7" class="section hidden">
+        <div class="page-header">
+            <span class="badge blue">Exercise 2 › Activity 7</span>
+            <h1>Button Click Event</h1>
+            <p>Click the button to trigger a click event and see the response.</p>
+        </div>
+        <div class="activity-box">
+            <button class="run-btn" onclick="runE2A7()">▶ Click Me!</button>
+            <div class="output-box" id="out_e2a7"></div>
+        </div>
+    </div>
+
+    <!-- ===== EXERCISE 3 ===== -->
+
+    <div id="e3a1" class="section hidden">
+        <div class="page-header">
+            <span class="badge green">Exercise 3 › Activity 1</span>
+            <h1>Change Background</h1>
+            <p>Toggle the background color of the activity panel.</p>
+        </div>
+        <div class="activity-box" id="bgTarget">
+            <button class="run-btn" id="btn1">🎨 Toggle Background</button>
+            <div class="output-box" id="out_e3a1">Background is: <strong>Default</strong></div>
+        </div>
+    </div>
+
+    <div id="e3a2" class="section hidden">
+        <div class="page-header">
+            <span class="badge green">Exercise 3 › Activity 2</span>
+            <h1>Dark Mode Toggle</h1>
+            <p>Toggle dark mode on this activity panel.</p>
+        </div>
+        <div class="activity-box" id="darkTarget">
+            <button class="run-btn" id="btn2">🌙 Toggle Dark Mode</button>
+            <div class="output-box" id="out_e3a2">Dark mode is: <strong>OFF</strong></div>
+        </div>
+    </div>
+
+    <div id="e3a3" class="section hidden">
+        <div class="page-header">
+            <span class="badge green">Exercise 3 › Activity 3</span>
+            <h1>Add List Item</h1>
+            <p>Click the button to dynamically add items to the list.</p>
+        </div>
+        <div class="activity-box">
+            <button class="run-btn" id="btn3">➕ Add Item</button>
+            <ul id="list" class="output-list"><li>Item 1</li></ul>
+        </div>
+    </div>
+
+    <div id="e3a4" class="section hidden">
+        <div class="page-header">
+            <span class="badge green">Exercise 3 › Activity 4</span>
+            <h1>Remove Element</h1>
+            <p>Click the button to remove the text element from the page.</p>
+        </div>
+        <div class="activity-box">
+            <p id="removeText" class="remove-text">⬅ This text will be removed when you click the button below.</p>
+            <button class="run-btn" id="btn4">🗑 Remove Text</button>
+        </div>
+    </div>
+
+    <div id="e3a5" class="section hidden">
+        <div class="page-header">
+            <span class="badge green">Exercise 3 › Activity 5</span>
+            <h1>Character Counter</h1>
+            <p>Type in the input box and watch the character count update in real time.</p>
+        </div>
+        <div class="activity-box">
+            <label>Type here:</label>
+            <input type="text" id="inputText" placeholder="Start typing..." />
+            <div class="output-box">Characters typed: <strong id="charCount">0</strong></div>
+        </div>
+    </div>
+
+    <div id="e3a6" class="section hidden">
+        <div class="page-header">
+            <span class="badge green">Exercise 3 › Activity 6</span>
+            <h1>Mini Calculator</h1>
+            <p>Enter two numbers and click Add to see the sum.</p>
+        </div>
+        <div class="activity-box">
+            <label>Number 1:</label>
+            <input type="number" id="num1" placeholder="e.g. 10" />
+            <label>Number 2:</label>
+            <input type="number" id="num2" placeholder="e.g. 5" />
+            <button class="run-btn" id="btn6">➕ Add Numbers</button>
+            <div class="output-box">Result: <strong id="result">—</strong></div>
+        </div>
+    </div>
+
+    <div id="e3a7" class="section hidden">
+        <div class="page-header">
+            <span class="badge green">Exercise 3 › Activity 7</span>
+            <h1>Image Swap</h1>
+            <p>Click the button to swap between two images. Make sure pic1.jpg and pic2.jpg exist.</p>
+        </div>
+        <div class="activity-box">
+            <img id="image" src="pic1.jpg" alt="Swappable Image" class="swap-img"/>
+            <br/>
+            <button class="run-btn" id="btn7">🖼 Swap Image</button>
+        </div>
+    </div>
+
+    <div id="e3a8" class="section hidden">
+        <div class="page-header">
+            <span class="badge green">Exercise 3 › Activity 8</span>
+            <h1>To-Do List</h1>
+            <p>Type a task and click Add to append it to your to-do list.</p>
+        </div>
+        <div class="activity-box">
+            <label>New Task:</label>
+            <div class="todo-row">
+                <input type="text" id="todoInput" placeholder="e.g. Study JavaScript" />
+                <button class="run-btn" id="btn8">✅ Add</button>
+            </div>
+            <ul id="todoList" class="output-list"></ul>
+        </div>
+    </div>
+
+    <!-- ===== EXERCISE 4 ===== -->
+
+    <div id="e4a1" class="section hidden">
+        <div class="page-header">
+            <span class="badge orange">Exercise 4 › Activity 1</span>
+            <h1>Grade Calculator</h1>
+            <p>Enter your scores to compute your final grade and letter equivalent.</p>
+        </div>
+        <div class="grade-card">
+            <label>Quiz Score (20%)</label>
+            <input type="number" id="quiz" placeholder="0 - 100" min="0" max="100"/>
+            <label>Exam Score (30%)</label>
+            <input type="number" id="exam" placeholder="0 - 100" min="0" max="100"/>
+            <label>MCO Score (50%)</label>
+            <input type="number" id="mco" placeholder="0 - 100" min="0" max="100"/>
+            <div class="grade-buttons">
+                <button id="calculateBtn" class="run-btn">🧮 Calculate</button>
+                <button id="resetBtn" class="btn-reset">🔄 Reset</button>
+            </div>
+            <div class="grade-result">
+                <p id="finalGrade"></p>
+                <p id="gradeEquivalent"></p>
+            </div>
+        </div>
+    </div>
+
+</div><!-- end .main -->
+
+<script src="script.js"></script>
+</body>
+</html>
